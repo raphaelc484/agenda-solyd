@@ -34,7 +34,7 @@ def add_editar_contato(nome, telefone, email, endereco):
         "email": email,
         "endereco": endereco,
     }
-    print(f"Contato {nome} foi adicionado com sucesso!!")
+    print(f"Contato {nome} foi add/editado com sucesso!!")
 
 
 # def add_contato(nome, telefone, email, endereco):
@@ -52,11 +52,18 @@ def add_editar_contato(nome, telefone, email, endereco):
 #             print(f"Contato {nome} foi editado com sucesso!!")
 
 
+def excluir_contato(contato):
+    AGENDA.pop(contato)
+    print(f"Contato {contato} foi excluido com sucesso!!")
+
+
 # mostrar_contatos()
 # buscar_contato("Raphael")
 add_editar_contato("Leticia", "7777-9999", "leticia@teste.com", "Av. 3")
 add_editar_contato("Leticia", "7777-9999", None, None)
+excluir_contato("Leticia")
 
 # editar_contato("leticia", "endereco", "Av. 4")
+
 
 mostrar_contatos()
