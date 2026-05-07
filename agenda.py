@@ -28,7 +28,7 @@ def buscar_contato(contato):
             print("-" * 30)
 
 
-def add_contato(nome, telefone, email, endereco):
+def add_editar_contato(nome, telefone, email, endereco):
     AGENDA[nome] = {
         "telefone": telefone,
         "email": email,
@@ -37,7 +37,26 @@ def add_contato(nome, telefone, email, endereco):
     print(f"Contato {nome} foi adicionado com sucesso!!")
 
 
+# def add_contato(nome, telefone, email, endereco):
+#     AGENDA[nome] = {
+#         "telefone": telefone,
+#         "email": email,
+#         "endereco": endereco,
+#     }
+#     print(f"Contato {nome} foi adicionado com sucesso!!")
+
+# def editar_contato(nome, valor, novo_valor):
+#     for contato, dados in AGENDA.items():
+#         if nome.lower() == contato.lower():
+#             dados[valor] = novo_valor
+#             print(f"Contato {nome} foi editado com sucesso!!")
+
+
 # mostrar_contatos()
 # buscar_contato("Raphael")
-add_contato("Leticia", "7777-9999", "leticia@teste.com", "Av. 3")
+add_editar_contato("Leticia", "7777-9999", "leticia@teste.com", "Av. 3")
+add_editar_contato("Leticia", "7777-9999", None, None)
+
+# editar_contato("leticia", "endereco", "Av. 4")
+
 mostrar_contatos()
