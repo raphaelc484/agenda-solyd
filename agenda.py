@@ -14,12 +14,30 @@ AGENDA["Rayssa"] = {
 
 
 def mostrar_contatos():
+    for nome, _ in AGENDA.items():
+        buscar_contato(nome)
+
+
+def buscar_contato(contato):
     for nome, dados in AGENDA.items():
-        print(f"Nome: {nome}")
-        print(f"Telefone: {dados['telefone']}")
-        print(f"E-mail: {dados['email']}")
-        print(f"Endereço: {dados['endereco']}")
-        print("-" * 30)
+        if nome.lower() == contato.lower():
+            print(f"Nome: {nome}")
+            print(f"Telefone: {dados['telefone']}")
+            print(f"E-mail: {dados['email']}")
+            print(f"Endereço: {dados['endereco']}")
+            print("-" * 30)
 
 
+def add_contato(nome, telefone, email, endereco):
+    AGENDA[nome] = {
+        "telefone": telefone,
+        "email": email,
+        "endereco": endereco,
+    }
+    print(f"Contato {nome} foi adicionado com sucesso!!")
+
+
+# mostrar_contatos()
+# buscar_contato("Raphael")
+add_contato("Leticia", "7777-9999", "leticia@teste.com", "Av. 3")
 mostrar_contatos()
