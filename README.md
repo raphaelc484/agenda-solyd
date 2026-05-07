@@ -28,6 +28,6 @@ Projeto de uma aplicação de agenda/gerenciamento de contatos desenvolvida em P
 
 ## 🖥️ Interface
 
-- [ ] Criar a interface do usuário (Menu)
+- [x] Criar a interface do usuário (Menu)
 
 ---

@@ -57,13 +57,45 @@ def excluir_contato(contato):
     print(f"Contato {contato} foi excluido com sucesso!!")
 
 
+def imprimir_opçoes():
+    print("1 - Mostrar todos os contatos da agenda")
+    print("2 - Buscar contato")
+    print("3 - Incluir contato")
+    print("4 - Editar contato")
+    print("5 - Excluir contato")
+    print("0 - Fechar agenda")
+    print("-" * 30)
+
+
 # mostrar_contatos()
 # buscar_contato("Raphael")
-add_editar_contato("Leticia", "7777-9999", "leticia@teste.com", "Av. 3")
-add_editar_contato("Leticia", "7777-9999", None, None)
-excluir_contato("Leticia")
-
+# add_editar_contato("Leticia", "7777-9999", "leticia@teste.com", "Av. 3")
+# add_editar_contato("Leticia", "7777-9999", None, None)
+# excluir_contato("Leticia")
 # editar_contato("leticia", "endereco", "Av. 4")
+# mostrar_contatos()
 
+imprimir_opçoes()
 
-mostrar_contatos()
+opcao = input("Escolha uma opçao: ")
+
+if opcao == "1":
+    mostrar_contatos()
+elif opcao == "2":
+    contato = input("Qual contato deseja consultar: ")
+    buscar_contato(contato)
+elif opcao in ("3", "4"):
+    nome = input("Qual nome do contato: ")
+    telefone = input("Qual telefone do contato: ")
+    email = input("Qual email do contato: ")
+    endereco = input("Qual endereço do contato: ")
+    add_editar_contato(nome, telefone, email, endereco)
+    buscar_contato(nome)
+elif opcao == "5":
+    contato = input("Qual contato deseja excluir: ")
+    excluir_contato(contato)
+    mostrar_contatos()
+elif opcao == "0":
+    print("Saindo da agenda")
+else:
+    print("Opção inválida")
