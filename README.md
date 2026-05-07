@@ -8,14 +8,14 @@ Projeto de uma aplicação de agenda/gerenciamento de contatos desenvolvida em P
 
 ## 🛠️ Estrutura Inicial
 
-- [x] Criar o projeto no PyCharm
+- [x] Criar o projeto no VSCode
 - [x] Escolher estrutura de dados adequada à agenda
 
 ---
 
 ## 📇 Funcionalidades da Agenda
 
-- [ ] Criar método para mostrar toda a agenda
+- [x] Criar método para mostrar toda a agenda
 - [ ] Criar método para incluir contato
 - [ ] Criar método para buscar contato
 - [ ] Criar método para excluir contato
