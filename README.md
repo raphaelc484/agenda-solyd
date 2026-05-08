@@ -22,7 +22,7 @@ Projeto de uma aplicação de agenda/gerenciamento de contatos desenvolvida em P
 - [x] Criar método para editar contato
 - [ ] Criar método para salvar a agenda
 - [ ] Criar método para carregar (load) a agenda
-- [ ] Exportar a agenda em um arquivo CSV
+- [x] Exportar a agenda em um arquivo CSV
 
 ---
 
