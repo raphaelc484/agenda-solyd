@@ -57,12 +57,30 @@ def excluir_contato(contato):
     print(f"Contato {contato} foi excluido com sucesso!!")
 
 
+def exportar_contatos():
+    try:
+        with open("agenda.txt", "w", encoding="utf-8") as arquivo:
+            for nome, dados in AGENDA.items():
+
+                telefone = dados.get("telefone", "")
+                email = dados.get("email", "")
+                endereco = dados.get("endereco", "")
+
+                linha = f"{nome}, {telefone}, {email}, {endereco}\n"
+
+                arquivo.write(linha)
+            print("Agenda exportada")
+    except:
+        print("Algum erro ocorreu ao exportar contatos")
+
+
 def imprimir_opçoes():
     print("1 - Mostrar todos os contatos da agenda")
     print("2 - Buscar contato")
     print("3 - Incluir contato")
     print("4 - Editar contato")
     print("5 - Excluir contato")
+    print("6 - Exportar contatos para CSV")
     print("0 - Fechar agenda")
     print("-" * 30)
 
@@ -95,6 +113,8 @@ elif opcao == "5":
     contato = input("Qual contato deseja excluir: ")
     excluir_contato(contato)
     mostrar_contatos()
+elif opcao == "6":
+    exportar_contatos()
 elif opcao == "0":
     print("Saindo da agenda")
 else:
